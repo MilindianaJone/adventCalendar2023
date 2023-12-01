@@ -8,7 +8,7 @@ def lineCalibration(line: str) -> int:
     ending = 0
     startingFound = False
     for char in line:
-        if char >= '0' and char <= '9':
+        if char >= '1' and char <= '9':
             if not startingFound:
                 starting = ord(char) - 48
                 startingFound = True
