@@ -15,14 +15,17 @@ def gameCheck(line: str) -> bool:
         blueIndex = sets.find("blue")
 
         if redIndex != -1:
-            if sets[redIndex - 2] > 12:
-                return False
+            if sets[redIndex - 3] == "1":
+                if int(sets[redIndex - 2]) > 2:
+                    return False
         if greenIndex != -1:
-            if sets[greenIndex - 2] > 13:
-                return False
+            if sets[greenIndex - 3] == "1":
+                if int(sets[greenIndex - 2]) > 3:
+                    return False
         if blueIndex != -1:
-            if sets[blueIndex - 2] > 14:
-                return False
+            if sets[blueIndex - 3] == "1":
+                if int(sets[blueIndex - 2]) > 4:
+                    return False
     return True
 
 """
