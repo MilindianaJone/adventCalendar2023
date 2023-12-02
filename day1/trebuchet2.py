@@ -67,7 +67,6 @@ def main(input: str) -> int:
     textMatrix = input.split('\n')
     for line in textMatrix:
         calibrationSum += wordLineCalibration(line)
-    print(calibrationSum)
     return calibrationSum
 
 if __name__ == "__main__":

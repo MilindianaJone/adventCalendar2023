@@ -10,7 +10,6 @@ Main function. Loops through each line and returns sum
 def main(input: str) -> int:
     gameSum = 0
     textMatrix = input.split('\n')
-    print(textMatrix)
     for index, line in enumerate(textMatrix):
         if gameCheck(line):
             gameSum += index + 1

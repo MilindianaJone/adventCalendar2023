@@ -22,10 +22,8 @@ Main function. Loops through each line and returns sum
 def main(input: str) -> int:
     calibrationSum = 0
     textMatrix = input.split('\n')
-    print(textMatrix)
     for line in textMatrix:
         calibrationSum += lineCalibration(line)
-    print(calibrationSum)
     return calibrationSum
 
 if __name__ == "__main__":
