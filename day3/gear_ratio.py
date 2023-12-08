@@ -29,7 +29,7 @@ def is_adjacent(lineIndex: int, numberLength: int, lineNumber: int) -> bool:
             if is_special(textMatrix[lineNumber + 1][lineIndex - 1]):
                 return True
     # Check right
-    if lineIndex + numberLength < matrixWidth:
+    if lineIndex + numberLength < matrixWidth - 1:
         if is_special(textMatrix[lineNumber][lineIndex + numberLength]):
             return True
         # Top right corner
@@ -42,13 +42,13 @@ def is_adjacent(lineIndex: int, numberLength: int, lineNumber: int) -> bool:
                 return True
 
     # Check above
-    if lineIndex != 0:
+    if lineNumber != 0:
         for index in range(lineIndex, lineIndex + numberLength):
             if is_special(textMatrix[lineNumber - 1][index]):
                 return True
 
     # Check below
-    if lineIndex < matrixHeight - 1:
+    if lineNumber < matrixHeight - 1:
         for index in range(lineIndex, lineIndex + numberLength):
             if is_special(textMatrix[lineNumber + 1][index]):
                 return True
@@ -86,7 +86,7 @@ def gearLine(line: str, lineNumber: int) -> int:
             # Check if this number has any adjacent elements
             if is_adjacent(lineIndex, numberLength, lineNumber):
                 lineSum += number
-                print(number)
+                print(lineNumber, number)
             
         else:
             numberLength = 0
